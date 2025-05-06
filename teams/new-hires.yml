@@ -11,6 +11,7 @@ name: New Hires
 policies:
   - path: ../lib/macos-device-health.policies.yml
   - path: ../lib/linux-device-health.policies.yml
+  - path: ../lib/dns-resolvers-policies.yml
 queries:
   - path: ../lib/collect-usb-devices.queries.yml
   - path: ../lib/collect-failed-login-attempts.queries.yml
@@ -19,6 +20,7 @@ agent_options:
 controls:
   scripts:
     - path: ../lib/remove-zoom-artifacts.script.sh
+    - path: ../lib/update-dns.sh
 team_settings:
   secrets:
     - secret: "$FLEET_NEW_HIRES_ENROLL_SECRET"
